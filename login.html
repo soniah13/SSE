@@ -1,14 +1,18 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    
-    <button id="btn">Click Here</button>
-    <div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonia School of Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="">
       <header class="bg-[#606060] mx-10">
         <div id="logo">
           <a href="/"
@@ -20,18 +24,18 @@
           /></a>
         </div>
         <nav class="relative z-10 flex p-6 md:p-8 justify-center items-center">
-          <div class="hidden md:flex gap-4 absolute">
-            <a href="index.html"><i class="fa-solid fa-house px-2"></i></a>
+          <div id="mobile-menu" class="hidden md:flex gap-4 absolute">
+            <a href="/"><i class="fa-solid fa-house px-2"></i></a>
             <a href="about.html"><i class="fa-solid fa-circle-info px-2"></i></a>
             <a href="contact.html"><i class="fa-solid fa-address-book px-2"></i></a>
             <a href="Account"><i class="fa-solid fa-circle-user px-2"></i></a>
           </div>
-          <div class="md:hidden block">
+          <div class="md:hidden block" id="hamburger">
             <i class="fa-solid fa-bars text-2xl"></i>
           </div>
         </nav>
       </header>
-      <main class="mb-4">
+      <main>
         <section
           id="hero-section"
           class="flex flex-col justify-center items-center gap-4 md:flex-row"
@@ -39,12 +43,21 @@
           <div class="flex md:justify-center md:items-center text-center">
             <div>
               <h1 class="text-5xl font-semibold text-[#606060]">
-                History of the<br /><span class="text-[#FF4CB4] font-bold"
+                Welcome to the<br /><span class="text-[#FF4CB4] font-bold"
                   >Engineering School</span
-                >of <span class="text-[#FF4CB4] font-bold">Sonia</span>
+                >
+                of <span class="text-[#FF4CB4] font-bold">Sonia</span>
               </h1>
+              <p class="text-xl font-semibold text-[#606060] py-4">
+                "Where we make you the engineer you would hire"
+              </p>
+              <p class="text-xl font-semibold py-4">
+                <i class="fa-solid fa-gear" style="color: #ff4cb4"></i> SCHOOL
+                OF THE FUTURE
+                <i class="fa-solid fa-gear" style="color: #ff4cb4"></i>
+              </p>
               <button
-                class="hover:bg-[#606060] hover:text-[#FF4CB4] bg-[#FF4CB4] text-[#606060] px-4 py-4 rounded-md font-semibold mt-4"
+                class="hover:bg-[#606060] hover:text-[#FF4CB4] bg-[#FF4CB4] text-[#606060] px-4 py-4 rounded-md font-semibold"
               >
                 Enrol Now
               </button>
@@ -52,57 +65,67 @@
           </div>
           <div id="hero-img">
             <img
-              src="images/about-hero.jpg"
+              src="images/pink-engineer.jpg"
               alt="Hero image"
               class="rounded-full w-[400px] h-[400px]"
             />
           </div>
         </section>
-        <section id="about-section" class="mt-6">
-            <div>
-            <h2 class="text-center font-semibold text-2xl pb-4 pt-2 underline">History of ESS</h2>
-          <div id="history-card" class="flex flex-row max-h-80 justify-around ml-10 mr-10">
-            <div id="history-image" class="rounded-md ">
-              <img
-                src="images/engineering-building.jpg" class="rounded-md"
-                alt="Engineering school" style="height: 300px; width: 500px;"
-              />
+        <section class="programs-section py-16 px-6 mb-4">
+          <h2 class="text-3xl font-bold text-center text-[#606060] mb-10">
+            Our Programs
+          </h2>
+          <div class="flex justify-center items-center">
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-[#606060] hover:bg-[#F7A8D4] shadow-lg p-6 rounded-xl text-center">
+              <i
+                class="fa-solid fa-laptop-code text-3xl text-[#FF4CB4] mb-4"
+              ></i>
+              <h3 class="text-xl font-semibold">Software Engineering</h3>
+              <p>Build real-world applications and systems.</p>
             </div>
-            <div class="w-1/2 flex justify-center items-center text-center ">
-              <p>
-                The Engineering school of sonia is a school that bridges the gap
-                between theory learning and practical learning, ensuring kids
-                have more time in practical than mastering theory. sonia school
-                of technology will solve this problem by sending students to the
-                industry and exposing them to real world technology 80% of
-                learning and theory is 20% of learning. ensuring students are
-                good at what they do and still understand what they are doing
-              </p>
+
+            <div class="bg-[#606060] hover:bg-[#F7A8D4] shadow-lg p-6 rounded-xl text-center">
+              <i class="fa-solid fa-microchip text-3xl text-[#FF4CB4] mb-4"></i>
+              <h3 class="text-xl font-semibold">Electronics Engineering</h3>
+              <p>Hands-on circuits, embedded systems & IoT.</p>
+            </div>
+
+            <div class="bg-[#606060] hover:bg-[#F7A8D4] shadow-lg p-6 rounded-xl text-center">
+              <i
+                class="fa-solid fa-network-wired text-3xl text-[#FF4CB4] mb-4"
+              ></i>
+              <h3 class="text-xl font-semibold">Networking & DevOps</h3>
+              <p>Deploy, scale and manage real systems.</p>
+            </div>
+            <div class="bg-[#606060] hover:bg-[#F7A8D4] shadow-lg p-6 rounded-xl text-center">
+              <i class="fa-solid fa-gears text-3xl text-[#FF4CB4] mb-4"></i>
+              <h3 class="text-xl font-semibold">Mechanical Engineering</h3>
+              <p>Hands-on circuits, embedded systems & IoT.</p>
+            </div>
+            <div class="bg-[#606060] hover:bg-[#F7A8D4] shadow-lg p-6 rounded-xl text-center">
+              <i
+                class="fa-solid fa-building-columns text-3xl text-[#FF4CB4] mb-4"
+              ></i>
+              <h3 class="text-xl font-semibold">Architecture</h3>
+              <p>Hands-on circuits, embedded systems & IoT.</p>
+            </div>
+            <div class="bg-[#606060] hover:bg-[#F7A8D4] shadow-lg p-6 rounded-xl text-center">
+              <i
+                class="fa-solid fa-shuttle-space text-3xl text-[#FF4CB4] mb-4"
+              ></i>
+              <h3 class="text-xl font-semibold">Aerospace Engineering</h3>
+              <p>Hands-on circuits, embedded systems & IoT.</p>
+            </div>
             </div>
           </div>
-          </div>
-          <div>
-          <h2 class="text-center font-semibold text-2xl pb-4 pt-2 underline">About ESS</h2>
-          <div id="history-card" class="flex flex-row max-h-80 justify-around ml-10 mr-10">
-            <div class="w-1/2 flex justify-center items-center text-center ">
-              <p>
-                The Engineering school of sonia is a school that bridges the gap
-                between theory learning and practical learning, ensuring kids
-                have more time in practical than mastering theory. sonia school
-                of technology will solve this problem by sending students to the
-                industry and exposing them to real world technology 80% of
-                learning and theory is 20% of learning. ensuring students are
-                good at what they do and still understand what they are doing
-              </p>
-            </div>
-            <div id="history-image" class="rounded-md ">
-              <img
-                src="images/about-ESS.jpg" class="rounded-md"
-                alt="Engineering school" style="height: 300px; width: 500px;"
-              />
-            </div>
-          </div>
-          </div>
+          <div class="flex justify-center items-center mt-10">
+            <button
+                class="hover:bg-[#606060] hover:text-[#FF4CB4] bg-[#FF4CB4] text-[#606060] py-4 px-6 rounded-md font-semibold"
+              >
+                Enrol Now
+              </button>
+              </div>
         </section>
       </main>
       <footer class="bg-[#F7A8D4] text-white text-center py-6">
@@ -116,5 +139,5 @@
       
       </footer>
     </div>
-</body>
+  </body>
 </html>
